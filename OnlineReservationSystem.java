@@ -1,3 +1,10 @@
+/*
+  Author: Seshu Jonna
+  Oasis Infobyte Internship
+  Task 1 of Java Programming
+  *************************************** ONLINE RESERVATION SYSTEM ********************************************
+*/
+
 import java.awt.*;  
 import javax.swing.*;
 import javax.swing.border.LineBorder;
@@ -805,11 +812,10 @@ class ConfirmationPage{
 class CancelTicket{
     JLabel details;
     JButton cancel;
-    String first_name;
-    String last_name;
-    String email;
+    String mobno;
     String userpnr;
     CancelTicket(String uname, String first_name, String last_name, String mobno){
+        
         JFrame frame = new JFrame("Cancelation form");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(450,450);
@@ -860,7 +866,6 @@ class CancelTicket{
                             stmt.setString(1,userpnr);
                             ResultSet res = stmt.executeQuery();
                             res.next();
-                            email = res.getString("email");
                             String train_no = res.getString("trainno");
                             String train_name = res.getString("trainname");
                             String class_tp = res.getString("class");
@@ -868,7 +873,7 @@ class CancelTicket{
                             String to = res.getString("toplace");
                             String date = res.getString("dateofjourney");
 
-                            details.setText("<html>Name: "+first_name+" "+last_name+"<br/>Email: "+email+"<br/>Mobile no: "+mobno+"<br/>Train no: "+train_no+"<br/>Train name: "+train_name+"<br/>Class type: "+class_tp+"<br/>Date: "+date+"<br/>From: "+from+"<br/>To: "+to+"</html>");
+                            details.setText("<html>Name: "+first_name+" "+last_name+"<br/>Email: "+uname+"<br/>Train no: "+train_no+"<br/>Train name: "+train_name+"<br/>Class type: "+class_tp+"<br/>Date: "+date+"<br/>From: "+from+"<br/>To: "+to+"</html>");
 
                             frame.add(cancel);
 
@@ -888,7 +893,7 @@ class CancelTicket{
                                         stmt1.executeUpdate();
                                         stmt1.close();
                                         JOptionPane.showMessageDialog(frame, "Ticket Canceled");
-                                        new HomePage(email, first_name, last_name, mobno);
+                                        new HomePage(uname, first_name, last_name, mobno);
                                         frame.setVisible(false);
                                         stmt1.close();
                                         connection.close();
@@ -928,7 +933,7 @@ class CancelTicket{
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.setVisible(false);
-                new HomePage(email, first_name, last_name, mobno);       
+                new HomePage(uname, first_name, last_name, mobno);    
             }
         });
 
@@ -944,4 +949,4 @@ class OnlineReservationSystem{
         new StartPage();
 
     }  
-} 
+}

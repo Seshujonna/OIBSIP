@@ -16,7 +16,6 @@ class NumberGuess{
     int count=0;
 
     NumberGuess(){
-
         Random random = new Random();
         number = random.nextInt(0,101);
         
@@ -76,9 +75,9 @@ class NumberGuess{
                         }
                     });
                 }
-        }});
+            }
+        });
         frame.getRootPane().setDefaultButton(button);
-
         button.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 
         result = new JLabel("",SwingConstants.CENTER);
@@ -94,16 +93,9 @@ class NumberGuess{
         frame.setLayout(null);    
         frame.setVisible(true);
     }
-
-
 }
-
 public class NumberGuessingGame {
-
     public static void main(String[] args) {
-
         new NumberGuess();
-
     }
-
 }

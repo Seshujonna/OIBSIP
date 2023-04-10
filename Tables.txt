@@ -1,0 +1,42 @@
+Creation of Passenger table:
+
+create table Passenger(
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    firstname VARCHAR(50) NOT NULL,
+    lastname VARCHAR(50) NOT NULL,
+    email VARCHAR(254) NOT NULL,
+    passwd VARCHAR(50) NOT NULL,
+    gender VARCHAR(10) NOT NULL,
+    marriage VARCHAR(10) NOT NULL,
+    dob DATE NOT NULL,
+    mobno VARCHAR(20) NOT NULL
+);
+
+
+Creation of Train table:
+
+create table train(
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    trainno VARCHAR(10) NOT NULL UNIQUE,
+    trainname VARCHAR(50) NOT NULL UNIQUE
+);
+
+
+Creation of booking_details table:
+
+create table booking_details(
+	pnr INT NOT NULL PRIMARY KEY,
+    firstname VARCHAR(50) NOT NULL,
+    lastname VARCHAR(50) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    trainno VARCHAR(10) NOT NULL,
+    trainname VARCHAR(50) NOT NULL,
+    class VARCHAR(5) NOT NULL,
+    dateofjourney DATE NOT NULL,
+    fromplace VARCHAR(20) NOT NULL,
+    toplace VARCHAR(20) NOT NULL
+);
+
+
+
+

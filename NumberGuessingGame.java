@@ -1,3 +1,10 @@
+/*
+  Author: Seshu Jonna
+  Oasis Infobyte Internship
+  Task 2 of Java Programming
+  *************************************** NUMBER GUESSING GAME ********************************************
+*/
+
 import java.awt.*;  
 import javax.swing.*;
 import java.awt.event.*;  
@@ -36,6 +43,7 @@ class NumberGuess{
 
         field = new JTextField();
         field.setBounds(210,45,150,25);
+        field.setFont(new Font("Ariel",Font.PLAIN,18));
         field.setCursor(Cursor.getPredefinedCursor(Cursor.TEXT_CURSOR));
         frame.add(field);
 
@@ -82,12 +90,12 @@ class NumberGuess{
 
         result = new JLabel("",SwingConstants.CENTER);
         result.setBounds(15,140,350,50);
-        result.setFont(new Font("Ariel",Font.BOLD,15));
+        result.setFont(new Font("Ariel",Font.BOLD,20));
         frame.add(result);
 
         cnt = new JLabel("",SwingConstants.CENTER);
         cnt.setBounds(38,175,300,50);
-        cnt.setFont(new Font("Ariel",Font.BOLD,15));
+        cnt.setFont(new Font("Ariel",Font.BOLD,20));
         frame.add(cnt);
         
         frame.setLayout(null);    

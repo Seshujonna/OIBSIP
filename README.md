@@ -1,7 +1,7 @@
 # OIBSIP
 This Git repository is about the Internship on Java Programming from Oasis Infobyte.
 This repository includes two Java files. They are Task-1 and Task-2 which were given by Oasis Infobye as part of the internship.
-As an Intern, Ive successfully completed the given two tasks.
+As an Intern, I've successfully completed the given two tasks.
 
 Task-1: Online Reservation System: 
     In this, I've worked with Java Swing and JDBC. This is designed to be a fully functional and user-friendly system.
